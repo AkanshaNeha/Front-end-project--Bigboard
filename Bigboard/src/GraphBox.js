@@ -1,5 +1,5 @@
 import React from 'react';
-
+import chart from 'chart.js';
 class GraphBox extends React.Component{
     render(){
         return(
