@@ -6,7 +6,8 @@
   height: 40vmin;
   pointer-events: none;
 }
-
+/*...This is a random commnet...*/
+/*
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -36,8 +37,7 @@
     transform: rotate(360deg);
   }
 }
-*/
-body {
+*/ body {
   background-color: rgb(138, 180, 138);
 }
 
