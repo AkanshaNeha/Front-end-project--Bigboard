@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/AkanshaNeha/Front-end-project--Bigboard/issues"
   },
-  "homepage": "https://github.com/AkanshaNeha/Front-end-project--Bigboard#readme"
+  "homepage": "https://github.com/AkanshaNeha/Front-end-project--Bigboard#readme",
+  "dependencies": {
+    "i": "^0.3.7"
+  }
 }
