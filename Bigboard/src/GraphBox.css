@@ -1,7 +1,13 @@
-.main__chart-select {
+/* .main__chart-select {
   width: 200px;
   height: 30px;
   font-size: 12px;
   position: absolute;
   right: 20px;
+} */
+body {
+  background-color: white;
 }
+/* h2{
+  background-color: white;
+} */
