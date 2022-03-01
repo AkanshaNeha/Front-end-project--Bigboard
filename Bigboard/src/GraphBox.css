@@ -1,12 +1,8 @@
-/* .main__chart-select {
-  width: 200px;
-  height: 30px;
-  font-size: 12px;
-  position: absolute;
-  right: 20px;
-} */
-body {
+/*body {
   background-color: white;
+}*/
+.graphClass {
+  width: 100%;
 }
 /* h2{
   background-color: white;
