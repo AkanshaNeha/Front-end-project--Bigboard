@@ -1,6 +1,7 @@
 import React from "react";
 // import '../css/styles.css';
 // import '../css/TableDataCard.css';
+import './TableBox.css';
 
 class TableBox extends React.Component {
   state = {
@@ -9,14 +10,17 @@ class TableBox extends React.Component {
 
   render() {
     let tableDataDOM = "";
+    console.log("test")
 
     // @dom: show all values in the table
     tableDataDOM = this.props.table_Values.map((table, index) => {
+      console.log(this.props.table_Values);
+
       // @condition: check if there is a viable response from the API call (e.g. AAAA doesn't exist)
       if (table !== "Symbol not supported") {
         return (
           <tr key={index}>
-            <td scope="row">AAPL</td>
+            <th scope="row">AAPL</th>
             <td>
               {JSON.stringify(new Date(table.t * 1000))
                 .split("T")[0]
@@ -108,7 +112,7 @@ class TableBox extends React.Component {
           <table className="table">
             <thead>
               <tr>
-                <th scope="col">Stock Code</th>
+                {/* <th scope="col">Stock Code</th>
                 <th scope="col">Last Updated Data</th>
                 <th scope="col">Open Price</th>
                 <th scope="col">Low Price</th>
@@ -116,6 +120,15 @@ class TableBox extends React.Component {
                 <th scope="col">Previous Close Price</th>
                 <th scope="col">Current Price</th>
                 <th scope="col">% From Yesterday</th>
+                <th scope="col">% From Yesterday</th> */}
+                <th>Stock Code</th>
+                <th>Last Updated Data</th>
+                <th>Open Price</th>
+                <th>Low Price</th>
+                <th>High Price</th>
+                <th>Previous Close Price</th>
+                <th>Current Price</th>
+                <th>% From Yesterday</th>
               </tr>
             </thead>
             <tbody>{tableDataDOM}</tbody>
