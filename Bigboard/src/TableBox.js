@@ -1,7 +1,7 @@
 import React from "react";
 // import '../css/styles.css';
 // import '../css/TableDataCard.css';
-import './TableBox.css';
+import "./TableBox.css";
 
 class TableBox extends React.Component {
   state = {
@@ -10,17 +10,18 @@ class TableBox extends React.Component {
 
   render() {
     let tableDataDOM = "";
-    console.log("test")
+    console.log("test");
 
     // @dom: show all values in the table
     tableDataDOM = this.props.table_Values.map((table, index) => {
       console.log(this.props.table_Values);
+      console.log(index);
 
       // @condition: check if there is a viable response from the API call (e.g. AAAA doesn't exist)
       if (table !== "Symbol not supported") {
         return (
           <tr key={index}>
-            <th scope="row">AAPL</th>
+            <th scope="row">{table.stockcode}</th>
             <td>
               {JSON.stringify(new Date(table.t * 1000))
                 .split("T")[0]
