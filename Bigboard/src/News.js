@@ -102,7 +102,7 @@ class News extends React.Component {
                 onmouseout="this.start();"
               >
                 {" "}
-                <a href="#"> {this.state.Data}</a>{" "}
+                <a href="#"> {this.state.Data}</a>
               </marquee>
             </div>
           </div>
