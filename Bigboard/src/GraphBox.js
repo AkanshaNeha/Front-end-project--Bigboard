@@ -11,15 +11,17 @@ class GraphBox extends React.Component {
     this.state = {};
   }
   componentDidUpdate(pP) {
-    if (pP.currentStockCode != this.props.currentStockCode)
-      if(pP.currentStockCode != this.props.currentStockCode){
+    if (pP.currentStockCode !== this.props.currentStockCode)
+      if(pP.currentStockCode !== this.props.currentStockCode){
       // console.log(this.props.currentStockCode);
       // console.log(this.props.alter_Graph);
       if (this.props.alter_Graph === false) {
         var startDate = Math.round(new Date().getTime() / 1000);
         var endDate = startDate - 72 * 3600;
       } else {
+        // eslint-disable-next-line no-redeclare
         var startDate = this.props.dates.endDate;
+        // eslint-disable-next-line no-redeclare
         var endDate = this.props.dates.startDate;
       }
       // console.log(a);

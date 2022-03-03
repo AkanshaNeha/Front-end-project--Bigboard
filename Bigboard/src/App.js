@@ -97,7 +97,7 @@ class App extends React.Component {
           <GraphBox currentStockCode={this.state.currentStockCode}>
             currentStockCode = {this.state.currentStockCode}
             dates = {this.state.dates}
-            alter_Graph={this.state.alter_Graph}>
+            alter_Graph={this.state.alter_Graph}
           </GraphBox>
            {/* <GraphBox
              graphData = {this.state.graphData} >
