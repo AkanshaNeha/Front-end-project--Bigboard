@@ -37,6 +37,7 @@ class GrapgBox extends React.Component {
     };
 }
  */
+
 // export default graphbox
 import React from "react";
 import axios from "axios";
@@ -77,10 +78,12 @@ class GraphBox extends React.Component {
           },
         })
         .then((response) => {
+          console.log(response);
           // console.log({ JSON.stringify(new Date(response.data.t * 1000)).split('T')[0].replace('"', '') });
           var unix_time = response.data.t;
           var i;
           var x = [];
+            // console.log(unix_time);
           for (i = 0; i < unix_time.length; i++) {
             var time = moment.unix(unix_time[i]).format("YYYY-MM-DD HH:mm");
             x.push(time);
