@@ -1,6 +1,7 @@
 import React from "react";
 import InputBox from "./InputBox";
 import TableBox from "./TableBox";
+import FilterBox from "./FilterBox";
 import GraphBox from "./GraphBox";
 import News from "./News";
 import "./App.css";
@@ -15,7 +16,8 @@ class App extends React.Component {
     show_Table: false,
     showGraphData: false,
     lsArray: ["AAPL"],
-    option: [],
+    alter_Graph: false,
+    list_codes: [],
   };
 
   getResults = (code, data) => {
@@ -24,22 +26,36 @@ class App extends React.Component {
         {
           table_Values: this.state.table_Values.concat(data.response),
           currentStockCode: data.stockcode,
+          list_codes: this.state.list_codes.concat(data.stockcode),
           showFilterDOM: true,
           show_Table: true,
+          alter_Graph: false,
         },
         () => {
-          
-
-          console.log(this.state.currentStockCode);
+          console.log(this.state.list_codes);
+          console.log(this.state.alter_Graph);
         }
       );
     }
+  };
+  filterData = (code, dates) => {
+    this.setState(
+      {
+        dates: dates,
+        alter_Graph: true,
+        show_Table: true,
+      },
+      () => {
+        console.log(this.state.alter_Graph);
+        console.log(this.state.dates);
+      }
+    );
   };
 
   //getGraphResults = (code, graph_data) => {
   //console.log(code);
   //console.log(graph_data);
-    render(){
+  render() {
     return (
       <div className="main-container">
         <div className="heading-container">
@@ -54,7 +70,22 @@ class App extends React.Component {
             this.state.show_Table ? "graph-container" : "hidden-table-container"
           }
         >
-          <GraphBox currentStockCode={this.state.currentStockCode}></GraphBox>
+          <FilterBox
+            currentStockCode={this.state.currentStockCode}
+            filterData={this.filterData}
+          ></FilterBox>
+        </div>
+        <div
+          className={
+            this.state.show_Table ? "graph-container" : "hidden-table-container"
+          }
+        >
+          {/* {this.state.alter_Graph ? */}
+          <GraphBox currentStockCode={this.state.currentStockCode}>
+            currentStockCode = {this.state.currentStockCode}
+            dates = {this.state.dates}
+            alter_Graph={this.state.alter_Graph}>
+          </GraphBox>
         </div>
         <div
           className={
@@ -67,7 +98,6 @@ class App extends React.Component {
           ></TableBox>
         </div>
         <div>
-         
           <News currentStockCode={this.state.currentStockCode}></News>
         </div>
 
@@ -85,7 +115,7 @@ class App extends React.Component {
                 </TableBox>
           </div>  */}
 
-         {/* <TableBox 
+        {/* <TableBox 
             show_Table = { this.state.show_Table }
             table_Values = { this.state.table_Values }>
             </TableBox> */}

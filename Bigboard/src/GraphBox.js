@@ -44,17 +44,27 @@ import { Line } from "react-chartjs-2";
 
 // import Plot from 'react-plotly.js';
 import "./GraphBox.css";
-import moment from 'moment';
+import moment from "moment";
 class GraphBox extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
   }
   componentDidUpdate(pP) {
-    if (pP.currentStockCode != this.props.currentStockCode) {
-      console.log(this.props.currentStockCode);
-      let startDate = Math.round(new Date().getTime() / 1000);
-      let endDate = startDate - 72 * 3600;
+    if (
+      pP.currentStockCode != this.props.currentStockCode ||
+      pP.currentStockCode == this.props.currentStockCode
+    ) {
+      // console.log(this.props.currentStockCode);
+      // console.log(this.props.alter_Graph);
+      if (this.props.alter_Graph === false) {
+        var startDate = Math.round(new Date().getTime() / 1000);
+        var endDate = startDate - 72 * 3600;
+      } else {
+        var startDate = this.props.dates.endDate;
+        var endDate = this.props.dates.startDate;
+      }
+      // console.log(a);
       const pointerToThis = this;
       axios
         .get("https://finnhub.io/api/v1/stock/candle", {
@@ -75,6 +85,7 @@ class GraphBox extends React.Component {
             var time = moment.unix(unix_time[i]).format("YYYY-MM-DD HH:mm");
             x.push(time);
           }
+          // console.log(x);
           var y = response.data.c;
           // console.log(typeof(y[0]));
           var lowOrHighColor = y[0] < y[y.length - 1] ? "#81b737" : "#d54f4f";
@@ -118,6 +129,7 @@ class GraphBox extends React.Component {
           options={{
             responsive: true,
             maintainAspectRatio: false,
+
             scales: {
               xAxes: [
                 {
@@ -125,7 +137,7 @@ class GraphBox extends React.Component {
                     display: false,
                   },
                   ticks: {
-                    display: false, //this will remove only the label
+                    display: true, //this will remove only the label
                   },
                   scaleLabel: {
                     display: true,
@@ -164,5 +176,6 @@ class GraphBox extends React.Component {
     );
   }
 }
-
 export default GraphBox;
+
+//export default GraphBox;
