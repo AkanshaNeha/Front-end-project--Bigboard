@@ -72,7 +72,7 @@ class App extends React.Component {
         </div>
         <div
           className={
-            this.state.show_Table ? "graph-container" : "hidden-table-container"
+            this.state.show_Table ? "filter-container" : "hidden-table-container"
           }
         >
           <FilterBox

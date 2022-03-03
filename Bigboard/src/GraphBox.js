@@ -52,6 +52,8 @@ class GraphBox extends React.Component {
           // console.log(typeof(y[0]));
           var lowOrHighColor = y[0] < y[y.length - 1] ? "#81b737" : "#d54f4f";
           this.setState({
+            symbol: this.props.currentStockCode,
+            text: 'in the last 72 Hours',
            Data: {
             labels: x,
             datasets: [
@@ -117,10 +119,13 @@ class GraphBox extends React.Component {
                       var time = moment.unix(unix_time[i]).format("YYYY-MM-DD HH:mm");
                       x.push(time)
                     }
+                    var text='between '+String(x[0]).slice(0,10)+' to '+String(x[x.length-1].slice(0,10))
                     var y = response.data.c;
                     var lowOrHighColor = y[0] < y[y.length - 1] 
                       ? '#81b737' : '#d54f4f';
                     this.setState({
+                      text: text,
+                      symbol: this.props.currentStockCode,
                       Data: {
                       labels: x,
                       datasets: [
@@ -156,7 +161,7 @@ class GraphBox extends React.Component {
   render() {
     return (
       <div className="graphClass">
-        <h2>Graph</h2>
+      <h2>Price per share of {this.state.symbol} {this.state.text} </h2>
         <Line
           data={this.state.Data}
           height={300}
