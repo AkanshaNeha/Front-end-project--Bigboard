@@ -33,19 +33,15 @@ class InputBox extends React.Component {
             },
           }
         );
-
-        var resp_data_graph = await axios.get(
-          "https://finnhub.io/api/v1/quote/stock/candle",
-          {
-            params: {
-              symbol: stockcode,
-              resolution: 5,
-              from: endDate,
-              to: startDate,
-              token: "bu5pnnf48v6qku34c7vg",
-            },
-          }
-        );
+        // var resp_data_graph = await axios.get('https://finnhub.io/api/v1/stock/candle',{
+        //     params:{
+        //         symbol: stockcode,
+        //         resolution: 5,
+        //         from: endDate,
+        //         to: startDate,
+        //         token: 'bu5pnnf48v6qku34c7vg'
+        //     }
+        // });
 
         this.setState(
           { inputArray: this.state.inputArray.concat(stockcode) },
