@@ -60,6 +60,13 @@ class App extends React.Component {
   //getGraphResults = (code, graph_data) => {
   //console.log(code);
   //console.log(graph_data);
+  getGraphResults = (code, graph_data) =>{
+    console.log(code);
+    console.log(graph_data);
+    this.setState({
+      graphData: graph_data
+    });
+  }
   render() {
     return (
       <div className="main-container">
@@ -92,6 +99,9 @@ class App extends React.Component {
             dates = {this.state.dates}
             alter_Graph={this.state.alter_Graph}>
           </GraphBox>
+           {/* <GraphBox
+             graphData = {this.state.graphData} >
+              </GraphBox> */}
         </div>
         <div
           className={
