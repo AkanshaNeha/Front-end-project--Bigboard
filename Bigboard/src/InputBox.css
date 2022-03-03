@@ -1,9 +1,22 @@
-.form-group{
-    text-align: center;
+.form-group {
+  text-align: center;
 }
 
-.form-control{
-    width: 280px;
-    display: inline;
+.form-control {
+  width: 80%;
+  display: inline;
+}
+.form-group button {
+  /* float: left; */
+  width: 20%;
+  background: rgb(46, 46, 46);
+  color: white;
+  font-size: 17px;
+  /* border: 1px solid grey; */
+  /* border-left: none; */
+  cursor: pointer;
+}
 
+.form-group button:hover {
+  background: rgb(68, 68, 68);
 }
