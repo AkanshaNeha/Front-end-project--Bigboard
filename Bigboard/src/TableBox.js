@@ -120,7 +120,6 @@ class TableBox extends React.Component {
                 <th scope="col">High Price</th>
                 <th scope="col">Previous Close Price</th>
                 <th scope="col">Current Price</th>
-                <th scope="col">% From Yesterday</th>
                 <th scope="col">% From Yesterday</th> */}
                 <th>Stock Code</th>
                 <th>Last Updated Data</th>

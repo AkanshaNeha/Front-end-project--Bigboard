@@ -53,7 +53,7 @@ class GraphBox extends React.Component {
     if (pP.currentStockCode != this.props.currentStockCode) {
       console.log(this.props.currentStockCode);
       let startDate = Math.round(new Date().getTime() / 1000);
-      let endDate = startDate - 72 * 3600;
+      let endDate = startDate - (72 * 3600);
       const pointerToThis = this;
       axios
         .get("https://finnhub.io/api/v1/stock/candle", {
