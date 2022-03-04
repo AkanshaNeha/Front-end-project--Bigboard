@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/no-distracting-elements */
 import React from "react";
 import axios from "axios";
 import moment from "moment";
@@ -72,44 +73,20 @@ class News extends React.Component {
   }
 
   render() {
-    // let startDate = Math.round(new Date().getTime() / 1000);
-    // let endDate = startDate - (72 * 3600);
-    // var news_response = await axios.get('https://finnhub.io/api/v1/company-news', {
-    //     params: {
-    //         symbol: this.props.lsArray[0],
-    //         from: endDate,
-    //         to: startDate,
-    //         token: 'bu5pnnf48v6qku34c7vg'
-    //     }
-    // });
-    // console.log(news_response);
     return (
-      <div class="container mt-5">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="d-flex justify-content-between align-items-center breaking-news bg-white">
-              <div
-                id="ticker"
-                class="ticker d-flex flex-row flex-grow-1 flex-fill justify-content-center py-2 px-1 news"
-              >
-                <span class="d-flex align-items-center">&nbsp;News</span>
-              </div>
-              <marquee
-                class="news-scroll"
-                behavior="scroll"
-                direction="left"
-                onmouseover="this.stop();"
-                onmouseout="this.start();"
-              >
-                {" "}
-                <a href="#"> {this.state.Data}</a>
-              </marquee>
-            </div>
-          </div>
+      <div class="container footer">
+         <div class="d-flex breaking-news">
+         <div id="ticker" class="ticker d-flex news"><span class="d-flex align-items-center">&nbsp;News</span></div>
+         <marquee class="news-scroll" behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();"> <a href="#"> {this.state.Data}</a> </marquee>
         </div>
+        {/* <div class="d-flex justify-content-between align-items-center breaking-news bg-white">
+        <div id="ticker" class="ticker d-flex flex-row flex-grow-1 flex-fill justify-content-center py-2 px-1 news"><span class="d-flex align-items-center">&nbsp;News</span></div>
+         <marquee class="news-scroll" behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();"> <a href="#"> {this.state.Data}</a> </marquee>
+        </div> */
+        }
       </div>
-    );
-  }
+        );
+    };
 }
 
 export default News;
