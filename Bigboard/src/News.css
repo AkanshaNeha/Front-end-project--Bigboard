@@ -32,9 +32,11 @@ body {
   /* justify-content: center;
   align-items: center; */
 }
-.hidden-footer-contianer {
+.hidden-footer-container {
   display: none;
+
 }
+
 /* a{
       color: white;
       text-align: center;
@@ -47,7 +49,7 @@ body {
       left: -78px;
   }
   } */
-/*
+
 .dot {
   height: 6px;
   width: 6px;
@@ -58,4 +60,4 @@ body {
   border-radius: 50%;
   display: inline-block;
 }
-*/
+
