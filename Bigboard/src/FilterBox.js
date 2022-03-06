@@ -32,9 +32,9 @@ class FilterBox extends React.Component {
   };
 
   render() {
-    let optionSelectDOM = '';
+    let DOM = '';
         // console.log(this.props.dict_codes);
-        optionSelectDOM = this.props.dict_codes.map((item, index) => {
+        DOM = this.props.dict_codes.map((item, index) => {
             return (
                 <option 
                     value={ item.stock_value } 
@@ -47,7 +47,7 @@ class FilterBox extends React.Component {
     return (
       <div className="form-group">
        <select className="custom-select filter-select">
-          { optionSelectDOM }
+          { DOM }
         </select>
         <div className="d-flex filter-card-date mt-2">
           <div className="filter-card-date-div">

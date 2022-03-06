@@ -31,49 +31,61 @@
     transform: rotate(360deg);
   }
 } */
-body{
-  background-color: rgb(138, 180, 138);
+body {
+  background-image: url(wave.mp4);
 }
-.heading-container{
+.heading-container {
+  position: relative;
   display: grid;
-    grid-template-rows: 60px;
-    /* grid-template-columns: repeat(1, 1fr); */
-  
-    /* background-color: black; */
-    color: white;
-    align-items: center;
-    justify-items: center;
-    
-    margin: 10px;
+  grid-template-rows: 60px;
+  /* grid-template-columns: repeat(1, 1fr); */
+
+  /* background-color: black; */
+  color: white;
+  align-items: center;
+  justify-items: center;
+
+  margin: 10px;
 }
-.pageheading{
+.form-group {
+  padding: 22px;
+}
+video {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.pageheading {
   font-size: 40px;
   font-weight: 700;
   font-family: "Times New Roman", Times, serif;
 }
-.hidden-table-container{
+.hidden-table-container {
   display: none;
 }
-.input-container{
-    display: grid;
-    grid-template-rows: 170px;
-    grid-template-columns: repeat(1, 1fr);
-    background-color: rgb(138, 180, 138);
-    color: black;
-    /* align-items: center; */
+.input-container {
+  position: relative;
+  display: grid;
+  grid-template-rows: 170px;
+  grid-template-columns: repeat(1, 1fr);
+  background-color: rgb(138, 180, 138);
+  color: black;
+  z-index: 100;
+  /* align-items: center; */
 
-    /* justify-items: center; */
-    font-size: 20;
-    margin: 20px;
-    margin-top: 20px;
-    /* width: 600px; */
-    padding-right: 50px;
-    padding-left: 50px;
-    margin-left: 200px;
-    margin-right: 200px;
-
+  /* justify-items: center; */
+  font-size: 20;
+  margin: 20px;
+  margin-top: 20px;
+  /* width: 600px; */
+  margin-left: 200px;
+  margin-right: 200px;
 }
-.graph-container{
+.graph-container {
+  position: relative;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-template-rows: 400px;
@@ -86,67 +98,65 @@ body{
   margin-top: 10px;
   margin-left: 200px;
   margin-right: 200px;
-  box-shadow: 3px 3px 3px 3px #888888;
+  box-shadow: 1px 2px 9px 7px #888888;
   overflow: auto;
-  
 }
-.table-container{
+.filter-container {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: 200px;
+  color: black;
+  background-color: white;
+  border-radius: 25px;
+  /* background-color: rgb(236, 233, 233); */
+  justify-items: center;
+  font-size: 20;
+  margin-top: 10px;
+  margin-left: 200px;
+  margin-right: 200px;
+  box-shadow: 4px 2px 7px 12px #888888;
+  margin-bottom: 20px;
+  box-shadow: 1px 2px 9px 7px #888888;
   overflow: auto;
-    display: grid;
-    border-radius: 25px;
-      grid-template-columns: repeat(1, 1fr);
-      grid-template-rows: auto;
-      color: black;
-      background-color: white;
-  
-      /* background-color: rgb(236, 233, 233); */
-      justify-items: center;
-      font-size: 20;
-      margin-top: 30px;
-      margin-left: 200px;
-      margin-right: 200px;
-      margin-bottom: 40px;
-      margin-left: 100px;
-      margin-right: 100px;
-      margin-bottom: 100px;
-      box-shadow: 3px 3px 3px 3px #888888;
+}
+.table-container {
+  position: relative;
+  overflow: auto;
+  display: grid;
+  border-radius: 25px;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: auto;
+  color: black;
+  background-color: white;
 
+  /* background-color: rgb(236, 233, 233); */
+  justify-items: center;
+  font-size: 20;
+  margin-top: 30px;
+  margin-left: 200px;
+  margin-right: 200px;
+  margin-bottom: 40px;
+  margin-left: 100px;
+  box-shadow: 1px 2px 9px 7px #888888;
 }
-.footer-container{
-  width: 100%;
-  left: 0;
-    bottom: 0;
-}
-.grid-item{
+.grid-item {
   display: grid;
   margin: 10px;
   /* padding: 10px; */
   background-color: rgb(248, 246, 246);
   /* background-color: rgb(192, 192, 192); */
-  
- /* align-items: center; */
+
+  /* align-items: center; */
   /* justify-items: center; */
 }
-@media(max-width:500px){
-  .pageheading{
+@media (max-width: 500px) {
+  .pageheading {
     font-size: 20px;
   }
-  .input-container{
+  .input-container {
     margin-left: 50px;
-    margin-left: 30px;
-    margin-right: 30px;
-  }
-  .table-container{
+
     margin-right: 50px;
-    margin-left: 50px;
   }
-
-
-}
-@media(max-width:769px) and (min-width: 500px){
-  .input-container{
-    margin-left: 40px;
-    margin-right: 40px;
-  }
-
 }
