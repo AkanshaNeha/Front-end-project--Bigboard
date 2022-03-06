@@ -32,11 +32,8 @@ table th {
   font-weight: 900;
   font-family: New Century Schoolbook, TeX Gyre Schola, serif;
   text-shadow: 1px 1px rgb(167, 166, 166);
-  font-size: 21px;
+  font-size: 23px;
 }
-td {
-    color: rgb(0, 35, 80);
-}    
 table {
   font-family: New Century Schoolbook, TeX Gyre Schola, serif;
   font-weight: 600;

@@ -79,11 +79,12 @@ video {
   color: white;
   align-items: center;
   justify-items: center;
-  margin: 10px;
+  margin: 20px;
 }
 .pageheading {
   font-size: 40px;
   font-weight: 700;
+  text-shadow: 1px 1px rgb(167, 166, 166);
   font-family: "Times New Roman", Times, serif;
 }
 .hidden-table-container {
@@ -117,7 +118,6 @@ video {
   /* background-color: rgb(236, 233, 233); */
   justify-items: center;
   font-size: 20;
-  margin-top: 10px;
   margin-top: 100px;
   margin-left: 100px;
   margin-bottom: 30px;
@@ -143,6 +143,10 @@ video {
   box-shadow: 1px 2px 9px 7px #888888;
   overflow: auto;
 }
+#select option {
+  width: 50px;
+}
+
 .table-container {
   position: relative;
   overflow: auto;
@@ -156,7 +160,6 @@ video {
   /* background-color: rgb(236, 233, 233); */
   justify-items: center;
   font-size: 20;
-  margin-top: 30px;
   margin-left: 100px;
   box-shadow: 1px 2px 9px 7px #888888;
   margin-right: 100px;
@@ -172,16 +175,22 @@ video {
   margin: 10px;
 }
 @media (max-width: 500px) {
-  .pageheading {
-    font-size: 20px;
+  .heading-container {
+    margin-top: 30px;
   }
   .input-container {
     margin-left: 30px;
     margin-right: 30px;
+    margin-bottom: 0;
   }
   .table-container {
     margin-right: 50px;
     margin-left: 50px;
+  }
+  .filer-container {
+    margin-right: 50px;
+    margin-left: 50px;
+    margin-top: 0;
   }
   .graph-container {
     margin-right: 50px;
