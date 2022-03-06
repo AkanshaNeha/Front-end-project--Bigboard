@@ -31,24 +31,39 @@
     transform: rotate(360deg);
   }
 } */
+h1 {
+  text-align: center;
+  font-size: 40px !important;
+  font-family: Century Schoolbook, TeX Gyre Schola, serif;
+  text-shadow: 1px 1px rgb(167, 166, 166);
+}
 body {
-  background-image: url(wave.mp4);
+  background-image: url(DNA.mp4);
 }
 .heading-container {
   position: relative;
-  display: grid;
-  grid-template-rows: 60px;
-  /* grid-template-columns: repeat(1, 1fr); */
-
-  /* background-color: black; */
-  color: white;
-  align-items: center;
-  justify-items: center;
-
-  margin: 10px;
+}
+.filter-container:not(.form-group) {
+  opacity: 0.89;
+}
+.graph-container {
+  opacity: 0.89;
+}
+.table-container {
+  opacity: 0.89;
 }
 .form-group {
-  padding: 22px;
+  padding-top: 22px;
+  font-family: "New Century Schoolbook, TeX Gyre Schola, serif";
+  color: rgb(0, 35, 80);
+  font-weight: bold;
+}
+.form-group > .form-control {
+  opacity: 0.85;
+  box-shadow: 1px 2px 20px 7px #888888;
+}
+.btn-secondary {
+  background-color: rgb(0, 35, 80) !important;
 }
 video {
   object-fit: cover;
@@ -57,6 +72,14 @@ video {
   position: fixed;
   top: 0;
   left: 0;
+}
+.heading-container {
+  display: grid;
+  grid-template-rows: 60px;
+  color: white;
+  align-items: center;
+  justify-items: center;
+  margin: 10px;
 }
 .pageheading {
   font-size: 40px;
@@ -73,11 +96,10 @@ video {
   grid-template-columns: repeat(1, 1fr);
   background-color: rgb(138, 180, 138);
   color: black;
-  z-index: 100;
+  font-size: 20;
   /* align-items: center; */
 
   /* justify-items: center; */
-  font-size: 20;
   margin: 20px;
   margin-top: 20px;
   /* width: 600px; */
@@ -96,8 +118,9 @@ video {
   justify-items: center;
   font-size: 20;
   margin-top: 10px;
-  margin-left: 200px;
-  margin-right: 200px;
+  margin-top: 100px;
+  margin-left: 100px;
+  margin-bottom: 30px;
   box-shadow: 1px 2px 9px 7px #888888;
   overflow: auto;
 }
@@ -113,10 +136,10 @@ video {
   justify-items: center;
   font-size: 20;
   margin-top: 10px;
-  margin-left: 200px;
-  margin-right: 200px;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-bottom: 30px;
   box-shadow: 4px 2px 7px 12px #888888;
-  margin-bottom: 20px;
   box-shadow: 1px 2px 9px 7px #888888;
   overflow: auto;
 }
@@ -134,29 +157,44 @@ video {
   justify-items: center;
   font-size: 20;
   margin-top: 30px;
-  margin-left: 200px;
-  margin-right: 200px;
-  margin-bottom: 40px;
   margin-left: 100px;
   box-shadow: 1px 2px 9px 7px #888888;
+  margin-right: 100px;
+  margin-bottom: 100px;
+}
+.footer-container {
+  width: 100%;
+  left: 0;
+  bottom: 0;
 }
 .grid-item {
   display: grid;
   margin: 10px;
-  /* padding: 10px; */
-  background-color: rgb(248, 246, 246);
-  /* background-color: rgb(192, 192, 192); */
-
-  /* align-items: center; */
-  /* justify-items: center; */
 }
 @media (max-width: 500px) {
   .pageheading {
     font-size: 20px;
   }
   .input-container {
-    margin-left: 50px;
-
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+  .table-container {
     margin-right: 50px;
+    margin-left: 50px;
+  }
+  .graph-container {
+    margin-right: 50px;
+    margin-left: 50px;
+  }
+  option {
+    display: inline-block;
+  }
+}
+
+@media (max-width: 769px) and (min-width: 500px) {
+  .input-container {
+    margin-left: 40px;
+    margin-right: 40px;
   }
 }

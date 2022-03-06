@@ -6,7 +6,7 @@ import GraphBox from "./GraphBox";
 import News from "./News";
 // import BackgroundVideo from './BackgroundVideo';
 import "./App.css";
-import video from './wave.mp4';
+import video from "./DNA.mp4";
 
 class App extends React.Component {
   state = {
@@ -18,7 +18,6 @@ class App extends React.Component {
     showFilterData: false,
     show_Table: false,
     showGraph: false,
-    lsArray: ["AAPL"],
     alter_Graph: false,
     dict_codes: [],
   };
@@ -44,6 +43,7 @@ class App extends React.Component {
       );
     }
   };
+
   filterData = (code, dates) => {
     console.log(dates);
     this.setState(
@@ -62,9 +62,6 @@ class App extends React.Component {
     console.log(this.state.dates);
   };
 
-  //getGraphResults = (code, graph_data) => {
-  //console.log(code);
-  //console.log(graph_data);
   getGraphResults = (code, graph_data) => {
     console.log(code);
     console.log(graph_data);
@@ -82,7 +79,6 @@ class App extends React.Component {
         <div className="heading-container">
           <h1 className="pageheading">BigBoard Dashboard</h1>
         </div>
-
         <div className="input-container">
           <InputBox getResults={this.getResults}></InputBox>
         </div>
@@ -104,15 +100,11 @@ class App extends React.Component {
             this.state.show_Table ? "graph-container" : "hidden-table-container"
           }
         >
-          {/* {this.state.alter_Graph ? */}
           <GraphBox currentStockCode={this.state.currentStockCode}>
             currentStockCode = {this.state.currentStockCode}
             dates = {this.state.dates}
             alter_Graph={this.state.alter_Graph}
           </GraphBox>
-          {/* <GraphBox
-             graphData = {this.state.graphData} >
-              </GraphBox> */}
         </div>
         <div
           className={
@@ -127,25 +119,6 @@ class App extends React.Component {
         <div>
           <News currentStockCode={this.state.currentStockCode}></News>
         </div>
-
-        {/* <div className={ this.state.show_Table ? "table-container" : "" } >
-
-          <div class="grid-item item0">
-          <GraphBox />
-          
-             
-          </div>
-          <div class="grid-item item1">
-                <TableBox 
-                show_Table = { this.state.show_Table }
-                table_Values = { this.state.table_Values }>
-                </TableBox>
-          </div>  */}
-
-        {/* <TableBox 
-            show_Table = { this.state.show_Table }
-            table_Values = { this.state.table_Values }>
-            </TableBox> */}
       </div>
     );
   }

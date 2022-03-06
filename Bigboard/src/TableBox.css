@@ -17,24 +17,28 @@ tbody > tr{
   text-align: left;
   
 } */
-.item-table{
-    padding: 10px;
+.item-table {
+  padding: 10px;
 }
-table th{
-    cursor: pointer;
-    font-size: 17px;
-    background-color: rgb(138, 180, 138);
+table th {
+  cursor: pointer;
+  font-size: 17px;
+  background-color: rgb(138, 180, 138);
+  color: white;
 }
-.table-heading{
-    text-align: center;
-    padding: 20px;
-    font-weight: 900;
-    font-family: New Century Schoolbook, TeX Gyre Schola, serif;
-    text-shadow: 1px 1px rgb(167, 166, 166);
-    font-size: 21px;
+.table-heading {
+  text-align: center;
+  padding: 20px;
+  font-weight: 900;
+  font-family: New Century Schoolbook, TeX Gyre Schola, serif;
+  text-shadow: 1px 1px rgb(167, 166, 166);
+  font-size: 21px;
 }
-table{
-    font-family: New Century Schoolbook, TeX Gyre Schola, serif;
-    font-weight: 600;
-    /* margin: 6px; */
+td {
+    color: rgb(0, 35, 80);
+}    
+table {
+  font-family: New Century Schoolbook, TeX Gyre Schola, serif;
+  font-weight: 600;
+  /* margin: 6px; */
 }

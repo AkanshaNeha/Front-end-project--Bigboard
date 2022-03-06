@@ -1,39 +1,3 @@
-// import React from 'react';
-// import axios from 'axios';
-// import './GraphBox.css';
-// class GraphBox extends React.Component{
-//     componentDidUpdate(pP){
-//         if(pP.currentStockCode != this.props.currentStockCode){
-//             console.log(this.props.currentStockCode);
-//         let startDate = Math.round(new Date().getTime() / 1000);
-//           let endDate = startDate - (72 * 3600);
-
-//           axios.get('https://finnhub.io/api/v1/stock/candle',{
-//             params:{
-//                 symbol: this.props.currentStockCode,
-//                 resolution: 5,
-//                 from: endDate,
-//                 to: startDate,
-//                 token: 'bu5pnnf48v6qku34c7vg'
-//             }})
-//           .then((response) => {
-//             console.log(response);
-//             // var hourly = response.data["hourly"];
-//             //console.log(hourly);
-//           })
-//         }
-//     }
-
-//     render(){
-
-//         return(
-//             <div className>
-//                 <h2>Graph</h2>
-//             </div>
-//         );
-//     };
-// }
-// export default GraphBox;
 import React from "react";
 import axios from "axios";
 import { Line } from "react-chartjs-2";
@@ -113,7 +77,7 @@ class GraphBox extends React.Component {
         .catch((error) => {
           console.log(error.response);
         });
-    } else if (pP.dates != this.props.dates) {
+    } else if (pP.dates !== this.props.dates) {
       if (this.props.alter_Graph === false) {
         var startDate = Math.round(new Date().getTime() / 1000);
         var endDate = startDate - 72 * 3600;
@@ -134,7 +98,7 @@ class GraphBox extends React.Component {
         })
         .then((response) => {
           console.log(response.data);
-          if (response.data.s == "no_data") {
+          if (response.data.s === "no_data") {
             // const alert = useAlert();
             alert(
               "No Data Currently Available. Markets are closed during weekends and public holidays. Please filter by previous date."
@@ -192,14 +156,19 @@ class GraphBox extends React.Component {
   render() {
     return (
       <div className="graphClass">
-        <h2>
+        <h5>
           Price per share of {this.state.symbol} {this.state.text}{" "}
-        </h2>
+        </h5>
         <Line
           data={this.state.Data}
           height={300}
           width={400}
           options={{
+            layout: {
+              padding: {
+                right: 20,
+              },
+            },
             responsive: true,
             maintainAspectRatio: false,
 
@@ -216,7 +185,10 @@ class GraphBox extends React.Component {
                     display: true,
 
                     labelString: "Time",
-                    fontColor: "black",
+                    fontColor: "rgb(0, 35, 80)",
+                    fontfamily:
+                      "New Century Schoolbook, teX Gyre Schola, serif",
+                    fontsize: 12,
                   },
                 },
               ],
@@ -227,8 +199,11 @@ class GraphBox extends React.Component {
                   },
                   scaleLabel: {
                     display: true,
-                    labelString: "Stock Price",
-                    fontColor: "black",
+                    labelString: "Stock Price ($)",
+                    fontColor: "rgb(0, 35, 80)",
+                    fontfamily:
+                      "New Century Schoolbook, teX Gyre Schola, serif",
+                    fontsize: 12,
                   },
                   ticks: {
                     display: true,
@@ -237,13 +212,13 @@ class GraphBox extends React.Component {
                 },
               ],
             },
-
             legend: {
               display: true,
               position: "top",
               labels: {
-                fontColor: "black",
+                fontColor: "rgb(0, 35, 80)",
                 fontSize: 12,
+                fontfamily: "New Century Schoolbook, teX Gyre Schola, serif",
               },
             },
           }}

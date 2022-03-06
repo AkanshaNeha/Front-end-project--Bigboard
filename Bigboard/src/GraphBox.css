@@ -10,13 +10,33 @@
   background-color: white;
 }*/
 .graphClass {
-  width: 100%;
+  width: 95%;
+  height: 80%;
 }
 /* h2{
   background-color: white;
 } */
 h2 {
   font-size: 1rem;
+}
+h5 {
   text-align: center;
   padding: 10px;
+  font-weight: 900 !important;
+  font-family: Century Schoolbook, TeX Gyre Schola, serif;
+  text-shadow: 1px 1px rgb(167, 166, 166);
+  font-size: 21px;
+  color: rgb(0, 35, 80);
+}
+@media (max-width: 769px) and (min-width: 501px) {
+  .graphClass {
+    width: 85%;
+    height: 80%;
+  }
+}
+@media (max-width: 500px) {
+  .graphClass {
+    width: 75%;
+    height: 80%;
+  }
 }

@@ -4,6 +4,24 @@
 }
 
 .form-control {
-  width: 280px;
+  width: 80%;
   display: inline;
+}
+.form-group button {
+  width: 20%;
+  /* padding-top: 9px;
+    padding-bottom: 7px;
+    padding-left: 20px;
+    padding-right: 20px; */
+  /* height: calc(1.5em + .75rem + 2px); */
+  background: rgb(46, 46, 46);
+  color: white;
+  font-size: 17px;
+  /* border: 1px solid grey; */
+  /* border-left: none; */
+  cursor: pointer;
+}
+
+.form-group button:hover {
+  background: rgb(68, 68, 68);
 }

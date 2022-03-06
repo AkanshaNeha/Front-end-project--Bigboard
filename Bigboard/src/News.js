@@ -8,14 +8,15 @@ class News extends React.Component {
   // constructor(props){
   //     super(props);
   // }
-  state = {};
-
+  state = {
+    Data: "**Provide your choice of company ticker to display the latest news",
+  };
   // state ={
   //     stockarray: this.props.lsarray
   // }
 
   // componentDidUpdate(pP){
-  //     if(pP.lsArray != this.props.lsArray){
+  //     if(pP.lsArray !== this.props.lsArray){
   //         this.componentDidMount();
   //     }
 
@@ -75,18 +76,27 @@ class News extends React.Component {
   render() {
     return (
       <div class="container footer">
-         <div class="d-flex breaking-news">
-         <div id="ticker" class="ticker d-flex news"><span class="d-flex align-items-center">&nbsp;News</span></div>
-         <marquee class="news-scroll" behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();"> <a href="#"> {this.state.Data}</a> </marquee>
+        <div class="d-flex breaking-news">
+          <div id="ticker" class="ticker d-flex news">
+            <span class="d-flex align-items-center">&nbsp;NEWS</span>
+          </div>
+          <marquee
+            class="news-scroll"
+            behavior="scroll"
+            direction="left"
+            onmouseover="this.stop();"
+            onmouseout="this.start();"
+          >
+            {" "}
+            <a href="#"> {this.state.Data}</a>{" "}
+          </marquee>
         </div>
         {/* <div class="d-flex justify-content-between align-items-center breaking-news bg-white">
         <div id="ticker" class="ticker d-flex flex-row flex-grow-1 flex-fill justify-content-center py-2 px-1 news"><span class="d-flex align-items-center">&nbsp;News</span></div>
          <marquee class="news-scroll" behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();"> <a href="#"> {this.state.Data}</a> </marquee>
-        </div> */
-        }
+        </div> */}
       </div>
-        );
-    };
+    );
+  }
 }
-
 export default News;
