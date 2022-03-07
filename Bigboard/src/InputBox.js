@@ -11,7 +11,7 @@ class InputBox extends React.Component {
 
     stockcode = document.getElementById("stockcode").value;
     let startDate = Math.round(new Date().getTime() / 1000);
-    let endDate = startDate - 72 * 3600;
+    let endDate = startDate -(72 * 3600);
     if (this.state.inputArray.includes(stockcode)) {
       alert("Already Exists");
       document.getElementById("stockcode").value = "";
@@ -77,24 +77,14 @@ class InputBox extends React.Component {
     val.value = val.value.toUpperCase();
     // var val = React.findDOMNode(this.ref.stockcode);
     // val.value = val.value.toUpperCase();
-  }
+  };
   render() {
     return (
       <div className="form-group">
-        <input
-          className="form-control"
-          type="text"
-          id="stockcode"
-          placeholder="Enter Stock Code (e.g. AAPL)"
-          onKeyUp={this.convertToUppercase}
-        ></input>
-        <button
-          className="btn btn-dark inputbutton"
-          type="submit"
-          onClick={() => this.getResults(true, "")}
-        >
-          <i class="fa fa-search"></i>
-        </button>
+         {/* <label for="stockcode" class="visuallyhidden">Stock Code </label> */}
+         <input className="form-control" type="text" id="stockcode" aria-label="Search"  placeholder="Enter Stock Code (e.g. AAPL)"  onKeyUp={ this.convertToUppercase}></input>
+        
+         <button className="btn btn-dark inputbutton" aria-label="Search" type="submit" onClick={ ()=> this.getResults(true,'')}><i className="fa fa-search"></i></button>
       </div>
     );
   }
