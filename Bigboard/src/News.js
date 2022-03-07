@@ -12,29 +12,6 @@ class News extends React.Component {
   state = {
     Data: "**Provide your choice of company stock ticker to display the latest news",
   };
-  // state ={
-  //     stockarray: this.props.lsarray
-  // }
-
-  // componentDidUpdate(pP){
-  //     if(pP.lsArray !== this.props.lsArray){
-  //         this.componentDidMount();
-  //     }
-
-  // }
-  // componentDidMount(){
-  //     let startDate = Math.round(new Date().getTime() / 1000);
-  //     let endDate = startDate - (72 * 3600);
-  //     var news_response = await Axios.get('https://finnhub.io/api/v1/company-news', {
-  //         params: {
-  //             symbol: this.props.lsArray[0],
-  //             from: endDate,
-  //             to: startDate,
-  //             token: 'bu5pnnf48v6qku34c7vg'
-  //         }
-  //     });
-  //     console.log(news_response);
-  // }
   componentDidUpdate(pP) {
     if (pP.currentStockCode !== this.props.currentStockCode) {
       console.log(this.props.currentStockCode);
@@ -77,17 +54,11 @@ class News extends React.Component {
   render() {
     return (
       <div className="container footer">
-        <div class="d-flex breaking-news">
-          <div id="ticker" class="ticker d-flex news">
-            <span class="d-flex align-items-center">&nbsp; NEWS</span>
+        <div className="d-flex breaking-news">
+          <div id="ticker" className="ticker d-flex news">
+            <span className="d-flex align-items-center">&nbsp;NEWS</span>
           </div>
-          <marquee
-            class="news-scroll"
-            behavior="scroll"
-            direction="left"
-            onmouseover="this.stop();"
-            onmouseout="this.start();"
-          >
+          <marquee className="news-scroll" behavior="scroll" direction="left">
             {" "}
             <a href="#"> {this.state.Data}</a>{" "}
           </marquee>
