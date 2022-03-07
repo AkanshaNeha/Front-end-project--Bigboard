@@ -7,8 +7,9 @@ import moment from "moment";
 class GraphBox extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
-  }
+    this.state = {
+    Data:{}
+  };}
   componentDidUpdate(pP) {
     if (pP.currentStockCode !== this.props.currentStockCode) {
       // console.log(this.props.currentStockCode);
