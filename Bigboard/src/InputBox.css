@@ -1,11 +1,12 @@
 .form-group {
   text-align: center;
-  z-index: 100;
+ 
 }
 
-.form-control {
+input#stockcode.form-control {
+  
   width: 80%;
-  display: inline;
+  display: inline-block;   
 }
 .form-group button {
   width: 20%;
