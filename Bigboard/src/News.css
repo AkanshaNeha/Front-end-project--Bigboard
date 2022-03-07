@@ -1,7 +1,7 @@
 body {
   background: #eee;
 }
-.footer {
+div.container.footer {
   position: fixed;
   left: 0;
   bottom: 0;
@@ -50,7 +50,7 @@ body {
   }
   } */
 
-.dot {
+/*.dot {
   height: 6px;
   width: 6px;
   margin-left: 3px;
@@ -60,4 +60,4 @@ body {
   border-radius: 50%;
   display: inline-block;
 }
-
+*/
