@@ -34,8 +34,22 @@ table th {
   text-shadow: 1px 1px rgb(167, 166, 166);
   font-size: 23px;
 }
+td {
+  color: rgb(138, 180, 138);
+}
 table {
   font-family: New Century Schoolbook, TeX Gyre Schola, serif;
   font-weight: 600;
   /* margin: 6px; */
+}
+@media (max-width: 500px) {
+  table th {
+    font-size: 15px;
+  }
+  td {
+    font-size: 13px;
+  }
+  .table-heading {
+    font-size: 20px;
+  }
 }
