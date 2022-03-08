@@ -8,12 +8,11 @@ class GraphBox extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-    Data:{}
-  };}
+      Data: {},
+    };
+  }
   componentDidUpdate(pP) {
     if (pP.currentStockCode !== this.props.currentStockCode) {
-      // console.log(this.props.currentStockCode);
-      // console.log(this.props.alter_Graph)
       if (this.props.alter_Graph === false) {
         let startDate = Math.round(new Date().getTime() / 1000);
         let endDate = startDate - 72 * 3600;
@@ -34,17 +33,14 @@ class GraphBox extends React.Component {
         })
         .then((response) => {
           console.log(response);
-          // console.log({ JSON.stringify(new Date(response.data.t * 1000)).split('T')[0].replace('"', '') });
           var unix_time = response.data.t;
           var i;
           var x = [];
-          // console.log(unix_time);
           for (i = 0; i < unix_time.length; i++) {
             var time = moment.unix(unix_time[i]).format("YYYY-MM-DD HH:mm");
             x.push(time);
           }
           var y = response.data.c;
-          // console.log(typeof(y[0]));
           var lowOrHighColor = y[0] < y[y.length - 1] ? "#81b737" : "#d54f4f";
           this.setState({
             symbol: this.props.currentStockCode,

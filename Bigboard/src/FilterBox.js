@@ -55,7 +55,13 @@ class FilterBox extends React.Component {
     });
     return (
       <div className="form-group">
-        <select className="custom-select filter-select" id='select' aria-label="Search">{DOM}</select>
+        <select
+          className="custom-select filter-select"
+          id="select"
+          aria-label="Search"
+        >
+          {DOM}
+        </select>
         <div className="d-flex filter-card-date mt-2">
           <div className="filter-card-date-div">
             <label className="mb-0">Start Date:</label>
@@ -77,7 +83,7 @@ class FilterBox extends React.Component {
           </div>
         </div>
         <button
-        id='filterbutton'
+          id="filterbutton"
           className="btn btn-secondary w-100 mt-3 btn-filter"
           onClick={this.filter}
         >

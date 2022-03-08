@@ -1,12 +1,10 @@
 .form-group {
   text-align: center;
- 
 }
 
 input#stockcode.form-control {
-  
   width: 80%;
-  display: inline-block;   
+  display: inline-block;
 }
 .form-group button {
   width: 20%;
