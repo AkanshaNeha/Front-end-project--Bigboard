@@ -23,8 +23,6 @@ class FilterBox extends React.Component {
           startDate: startDate,
           endDate: endDate,
         });
-        console.log(startDate);
-        console.log(endDate);
       } else {
         document.querySelector("input.start-date").value = "";
         document.querySelector("input.end-date").value = "";
