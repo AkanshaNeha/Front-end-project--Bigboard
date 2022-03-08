@@ -59,8 +59,7 @@ class News extends React.Component {
             <span className="d-flex align-items-center">&nbsp;NEWS</span>
           </div>
           <marquee className="news-scroll" behavior="scroll" direction="left">
-            {" "}
-            <a href="#"> {this.state.Data}</a>{" "}
+            <a href="#"> {this.state.Data}</a>
           </marquee>
         </div>
       </div>

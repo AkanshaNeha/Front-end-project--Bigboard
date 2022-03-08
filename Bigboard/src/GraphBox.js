@@ -73,7 +73,7 @@ class GraphBox extends React.Component{
               console.log(error.response)
             });
         }
-        else if(pP.dates!=this.props.dates){
+        else if(pP.dates!==this.props.dates){
           if (this.props.alter_Graph===false){
             var startDate = Math.round(new Date().getTime() / 1000);
             var endDate = startDate - (72 * 3600);

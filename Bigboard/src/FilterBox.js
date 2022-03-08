@@ -1,6 +1,5 @@
 import React from "react";
 import axios from "axios";
-// import './InputBox.css';
 
 class FilterBox extends React.Component {
   filter = () => {
@@ -8,15 +7,12 @@ class FilterBox extends React.Component {
       document.getElementById("startdate").value &&
       document.getElementById("enddate").value
     ) {
-      // document.getElementById('startdate').value = new Date().toDateInputValue();
       let stock_code = document.querySelector(".filter-select").value;
       let startDate =
         new Date(document.querySelector("input.start-date").value) / 1000;
       let endDate =
         new Date(document.querySelector("input.end-date").value) / 1000 + 36000;
-      console.log(endDate);
       let currentTime = Math.round(new Date().getTime() / 1000);
-      console.log(currentTime);
       if (
         currentTime > startDate &&
         currentTime > endDate &&
@@ -27,8 +23,6 @@ class FilterBox extends React.Component {
           startDate: startDate,
           endDate: endDate,
         });
-        console.log(startDate);
-        console.log(endDate);
       } else {
         document.querySelector("input.start-date").value = "";
         document.querySelector("input.end-date").value = "";
@@ -41,7 +35,6 @@ class FilterBox extends React.Component {
 
   render() {
     let DOM = "";
-    // console.log(this.props.dict_codes);
     DOM = this.props.dict_codes.map((item, index) => {
       return (
         <option
@@ -55,7 +48,13 @@ class FilterBox extends React.Component {
     });
     return (
       <div className="form-group">
-        <select className="custom-select filter-select" id='select' aria-label="Search">{DOM}</select>
+        <select
+          className="custom-select filter-select"
+          id="select"
+          aria-label="Search"
+        >
+          {DOM}
+        </select>
         <div className="d-flex filter-card-date mt-2">
           <div className="filter-card-date-div">
             <label className="mb-0">Start Date:</label>
@@ -77,7 +76,7 @@ class FilterBox extends React.Component {
           </div>
         </div>
         <button
-        id='filterbutton'
+          id="filterbutton"
           className="btn btn-secondary w-100 mt-3 btn-filter"
           onClick={this.filter}
         >
