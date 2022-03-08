@@ -4,7 +4,6 @@ import TableBox from "./TableBox";
 import FilterBox from "./FilterBox";
 import GraphBox from "./GraphBox";
 import News from "./News";
-// import BackgroundVideo from './BackgroundVideo';
 import "./App.css";
 import video from "./DNA.mp4";
 
@@ -124,4 +123,4 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default App

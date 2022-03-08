@@ -2,6 +2,20 @@
 Deployed site : https://github.com/AkanshaNeha/Front-end-project--Bigboard
 stock-prediction/README.md
 
+STACK/LIBRARIES USED:
+- HTML
+- CSS
+- Bootstrap
+- Reactjs
+- Font awesome
+- Moment
+- Axios
+- react-chartjs-2
+
+API’s USED
+- Finnhub API
+    - 30 API calls/ second limit; Retrieves company stock value over a given time period; Retrieve latest  open price, low price, high Price, previous close price, current price of a company; Retrieve latest news of companies.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
