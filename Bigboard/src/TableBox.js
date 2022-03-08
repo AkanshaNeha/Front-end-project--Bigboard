@@ -35,13 +35,13 @@ class TableBox extends React.Component {
   //             y = rows[i + 1].getElementsByTagName("TD")[n];
   //             console.log(y)
 
-  //             if (order == "asc") {
+  //             if (order === "asc") {
   //                 if ((+x.innerHTML) > (+y.innerHTML)) {
 
   //                     shouldSwitch= true;
   //                     break;
   //                 }
-  //             } else if (order == "desc") {
+  //             } else if (order === "desc") {
   //                 if ((+x.innerHTML) < (+y.innerHTML)) {
 
   //                     shouldSwitch = true;
@@ -58,7 +58,7 @@ class TableBox extends React.Component {
   //         switchcount ++;
   //         } else {
 
-  //         if (switchcount == 0 && order == "asc") {
+  //         if (switchcount === 0 && order === "asc") {
   //             order = "desc";
   //             switching = true;
   //         }

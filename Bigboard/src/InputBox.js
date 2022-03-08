@@ -38,12 +38,12 @@ class InputBox extends React.Component {
           { inputArray: this.state.inputArray.concat(stockcode) },
           () => {
             if (
-              resp_data_table.data.c == 0 &&
-              resp_data_table.data.h == 0 &&
-              resp_data_table.data.l == 0 &&
-              resp_data_table.data.o == 0 &&
-              resp_data_table.data.pc == 0 &&
-              resp_data_table.data.t == 0
+              resp_data_table.data.c === 0 &&
+              resp_data_table.data.h === 0 &&
+              resp_data_table.data.l === 0 &&
+              resp_data_table.data.o === 0 &&
+              resp_data_table.data.pc === 0 &&
+              resp_data_table.data.t === 0
             ) {
               this.props.getGraphResults("no_data", "");
             } else {
@@ -89,4 +89,4 @@ class InputBox extends React.Component {
   }
 }
 
-export default InputBox;
+export default InputBox
