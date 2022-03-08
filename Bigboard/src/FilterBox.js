@@ -47,7 +47,7 @@ class FilterBox extends React.Component {
         <option
           value={item.stock_value}
           key={index}
-          selected={item.stock_value}
+          defaultValue={item.stock_value}
         >
           {item.stock_value}
         </option>
@@ -55,7 +55,7 @@ class FilterBox extends React.Component {
     });
     return (
       <div className="form-group">
-        <select className="custom-select filter-select">{DOM}</select>
+        <select className="custom-select filter-select" id='select' aria-label="Search">{DOM}</select>
         <div className="d-flex filter-card-date mt-2">
           <div className="filter-card-date-div">
             <label className="mb-0">Start Date:</label>
@@ -63,6 +63,7 @@ class FilterBox extends React.Component {
               className="form-control start-date"
               type="date"
               id="startdate"
+              aria-label="Search"
             ></input>
           </div>
           <div className="filter-card-date-div">
@@ -71,10 +72,12 @@ class FilterBox extends React.Component {
               className="form-control end-date"
               type="date"
               id="startdate"
+              aria-label="Search"
             ></input>
           </div>
         </div>
         <button
+        id='filterbutton'
           className="btn btn-secondary w-100 mt-3 btn-filter"
           onClick={this.filter}
         >
