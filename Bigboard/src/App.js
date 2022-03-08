@@ -1,8 +1,8 @@
 import React from "react";
 import InputBox from "./InputBox";
 import TableBox from "./TableBox";
-import FilterBox from "./FilterBox";
 import GraphBox from "./GraphBox";
+import FilterBox from "./FilterBox";
 import News from "./News";
 import "./App.css";
 import video from "./DNA.mp4";
@@ -76,14 +76,14 @@ class App extends React.Component {
           Your browser does not support the video tag.
         </video>
         <div className="heading-container">
-          <h1 className="pageheading">BigBoard Dashboard</h1>
+          <h1 className="pageheading">Stock Price Dashboard</h1>
         </div>
         <div className="input-container">
           <InputBox getResults={this.getResults}></InputBox>
         </div>
         <div
           className={
-            this.state.show_Table
+            this.state.showFilterDOM
               ? "filter-container"
               : "hidden-table-container"
           }
@@ -98,29 +98,29 @@ class App extends React.Component {
           className={
             this.state.show_Table ? "graph-container" : "hidden-table-container"
           }
+          tabindex="0"
         >
-          <GraphBox currentStockCode={this.state.currentStockCode}>
-            currentStockCode = {this.state.currentStockCode}
-            dates = {this.state.dates}
+          <GraphBox
+            currentStockCode={this.state.currentStockCode}
+            dates={this.state.dates}
             alter_Graph={this.state.alter_Graph}
-          </GraphBox>
+          ></GraphBox>
         </div>
         <div
           className={
             this.state.show_Table ? "table-container" : "hidden-table-container"
           }
+          tabindex="0"
         >
           <TableBox
             show_Table={this.state.show_Table}
             table_Values={this.state.table_Values}
           ></TableBox>
         </div>
-        <div>
-          <News currentStockCode={this.state.currentStockCode}></News>
-        </div>
+        <News currentStockCode={this.state.currentStockCode}></News>
       </div>
     );
   }
 }
 
-export default App
+export default App;
