@@ -72,4 +72,4 @@ class TableBox extends React.Component {
   }
 }
 
-export default TableBox
+export default TableBox;
