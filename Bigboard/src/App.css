@@ -1,38 +1,57 @@
-h1 {
+h1
+{
   text-align: center;
   font-size: 40px !important;
-  font-family: Century Schoolbook, TeX Gyre Schola, serif;
+  font-family:  Century Schoolbook, TeX Gyre Schola, serif;
   text-shadow: 1px 1px rgb(167, 166, 166);
 }
-body {
-  background-image: url(DNA.mp4);
+
+body
+{
+  background-image:url(DNA.mp4) ;
 }
-.heading-container {
+
+.heading-container
+{
   position: relative;
 }
-.filter-container:not(.form-group) {
+
+.filter-container:not(.form-group) 
+{ 
+  opacity: 0.89; 
+} 
+
+.graph-container
+{
   opacity: 0.89;
 }
-.graph-container {
+
+.table-container
+{
   opacity: 0.89;
 }
-.table-container {
-  opacity: 0.89;
-}
-.form-group {
+
+.form-group
+{
   padding-top: 22px;
-  font-family: "New Century Schoolbook, TeX Gyre Schola, serif";
+  font-family:'New Century Schoolbook, TeX Gyre Schola, serif';
   color: rgb(0, 35, 80);
-  font-weight: bold;
+  font-weight: bold; 
 }
-.form-group > .form-control {
+
+.form-group>.form-control
+{
   opacity: 0.85;
   box-shadow: 1px 2px 20px 7px #888888;
 }
-.btn-secondary {
+
+.btn-secondary
+{
   background-color: rgb(0, 35, 80) !important;
 }
-video {
+
+video
+{
   object-fit: cover;
   width: 100vw;
   height: 100vh;
@@ -40,37 +59,47 @@ video {
   top: 0;
   left: 0;
 }
-.heading-container {
+
+.heading-container
+{
   display: grid;
-  grid-template-rows: 60px;
-  color: white;
-  align-items: center;
-  justify-items: center;
-  margin: 20px;
+    grid-template-rows: 60px;
+    color: white;
+    align-items: center;
+    justify-items: center; 
+    margin: 20px;   
 }
-.pageheading {
+
+.pageheading
+{
   font-size: 40px;
   font-weight: 700;
   text-shadow: 1px 1px rgb(167, 166, 166);
   font-family: "Times New Roman", Times, serif;
 }
-.hidden-table-container {
+
+.hidden-table-container
+{
   display: none;
 }
-.input-container {
+
+.input-container
+{
   position: relative;
   display: grid;
   grid-template-rows: 170px;
   grid-template-columns: repeat(1, 1fr);
-  background-color: rgb(138, 180, 138);
   color: black;
   font-size: 20;
-  margin: 20px;
   margin-top: 20px;
+  padding-right: 50px;
+  padding-left: 50px;
   margin-left: 200px;
   margin-right: 200px;
 }
-.graph-container {
+
+.graph-container
+{
   position: relative;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
@@ -80,13 +109,15 @@ video {
   border-radius: 25px;
   justify-items: center;
   font-size: 20;
-  margin-top: 100px;
   margin-left: 100px;
+  margin-right: 100px;
   margin-bottom: 30px;
   box-shadow: 1px 2px 9px 7px #888888;
   overflow: auto;
 }
-.filter-container {
+
+.filter-container
+{
   position: relative;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
@@ -103,11 +134,14 @@ video {
   box-shadow: 1px 2px 9px 7px #888888;
   overflow: auto;
 }
-#select option {
-  width: 50px;
-}
 
-.table-container {
+#select option 
+{
+   width: 50px; 
+  }
+
+.table-container
+{
   position: relative;
   overflow: auto;
   display: grid;
@@ -118,51 +152,71 @@ video {
   background-color: white;
   justify-items: center;
   font-size: 20;
-  margin-left: 100px;
   box-shadow: 1px 2px 9px 7px #888888;
+  margin-left: 100px;
   margin-right: 100px;
-  margin-bottom: 100px;
+  margin-bottom: 100px; 
 }
-.footer-container {
+
+.footer-container
+{
   width: 100%;
   left: 0;
-  bottom: 0;
+    bottom: 0;
 }
-.grid-item {
+
+.grid-item
+{
   display: grid;
   margin: 10px;
   background-color: rgb(248, 246, 246);
 }
-@media (max-width: 500px) {
-  .heading-container {
+
+@media(max-width:500px)
+{
+  .heading-container
+  {
     margin-top: 30px;
   }
-  .input-container {
+ 
+  .input-container
+  {
     margin-left: 30px;
     margin-right: 30px;
     margin-bottom: 0;
   }
-  .table-container {
+
+  .table-container
+  {
     margin-right: 50px;
     margin-left: 50px;
   }
-  .filer-container {
+
+  .filter-container
+  {
     margin-right: 50px;
     margin-left: 50px;
     margin-top: 0;
   }
-  .graph-container {
+
+  .graph-container
+  {
     margin-right: 50px;
     margin-left: 50px;
   }
-  option {
+
+  option 
+  {
     display: inline-block;
   }
+
 }
 
-@media (max-width: 769px) and (min-width: 500px) {
-  .input-container {
+@media(max-width:769px) and (min-width: 500px)
+{
+  .input-container{
     margin-left: 40px;
     margin-right: 40px;
   }
+
 }

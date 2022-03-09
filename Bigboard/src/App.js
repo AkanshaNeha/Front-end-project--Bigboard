@@ -76,7 +76,7 @@ class App extends React.Component {
           Your browser does not support the video tag.
         </video>
         <div className="heading-container">
-          <h1 className="pageheading">Stock Price Dashboard</h1>
+          <h1 className="pageheading">Big Board</h1>
         </div>
         <div className="input-container">
           <InputBox getResults={this.getResults}></InputBox>
