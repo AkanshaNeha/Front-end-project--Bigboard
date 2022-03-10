@@ -11,8 +11,8 @@ class News extends React.Component {
   };
 
   componentDidUpdate(pP) {
-    if (pP.currentStockCode !== this.props.currentStockCode) {
-      console.log(this.props.currentStockCode);
+    if (pP.cstockcode !== this.props.cstockcode) {
+      console.log(this.props.cstockcode);
       let startDate = Math.round(new Date().getTime() / 1000);
       let endDate = startDate - 72 * 3600;
       startDate = moment.unix(startDate).format("YYYY MMM DD");
@@ -31,7 +31,7 @@ class News extends React.Component {
       axios
         .get("https://finnhub.io/api/v1/company-news", {
           params: {
-            symbol: this.props.currentStockCode,
+            symbol: this.props.cstockcode,
             from: endDate,
             to: startDate,
             token: "bu5pnnf48v6qku34c7vg",

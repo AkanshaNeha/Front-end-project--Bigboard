@@ -10,13 +10,13 @@ import video from "./DNA.mp4";
 class App extends React.Component {
   state = {
     videoSource: video,
-    table_Values: [],
+    tab_data: [],
     graphData: [],
-    currentStockCode: "",
+    cstockcode: "",
     showFilterDOM: false,
     showFilterData: false,
-    show_Table: false,
-    showGraph: false,
+    display_table: false,
+    Graphdisplay: false,
     alter_Graph: false,
     dict_codes: [],
   };
@@ -25,14 +25,14 @@ class App extends React.Component {
     if (data.response !== "Symbol not supported") {
       this.setState(
         {
-          table_Values: this.state.table_Values.concat(data.response),
-          currentStockCode: data.stockcode,
+          tab_data: this.state.tab_data.concat(data.response),
+          cstockcode: data.stockcode,
           dict_codes: this.state.dict_codes.concat({
             stock_value: data.stockcode,
           }),
           showFilterDOM: true,
-          show_Table: true,
-          showGraph: true,
+          display_table: true,
+          Graphdisplay: true,
           alter_Graph: false,
         },
         () => {
@@ -48,13 +48,13 @@ class App extends React.Component {
     this.setState(
       {
         dates: dates,
-        currentStockCode: dates.stock_code,
+        cstockcode: dates.stock_code,
         alter_Graph: true,
-        show_Table: true,
-        showGraph: true,
+        display_table: true,
+        Graphdisplay: true,
       },
       () => {
-        console.log(this.state.currentStockCode);
+        console.log(this.state.cstockcode);
         console.log(this.state.dates);
       }
     );
@@ -89,35 +89,39 @@ class App extends React.Component {
           }
         >
           <FilterBox
-            currentStockCode={this.state.currentStockCode}
+            cstockcode={this.state.cstockcode}
             filterData={this.filterData}
             dict_codes={this.state.dict_codes}
           ></FilterBox>
         </div>
         <div
           className={
-            this.state.show_Table ? "graph-container" : "hidden-table-container"
+            this.state.display_table
+              ? "graph-container"
+              : "hidden-table-container"
           }
           tabindex="0"
         >
           <GraphBox
-            currentStockCode={this.state.currentStockCode}
+            cstockcode={this.state.cstockcode}
             dates={this.state.dates}
             alter_Graph={this.state.alter_Graph}
           ></GraphBox>
         </div>
         <div
           className={
-            this.state.show_Table ? "table-container" : "hidden-table-container"
+            this.state.display_table
+              ? "table-container"
+              : "hidden-table-container"
           }
           tabindex="0"
         >
           <TableBox
-            show_Table={this.state.show_Table}
-            table_Values={this.state.table_Values}
+            display_table={this.state.display_table}
+            tab_data={this.state.tab_data}
           ></TableBox>
         </div>
-        <News currentStockCode={this.state.currentStockCode}></News>
+        <News cstockcode={this.state.cstockcode}></News>
       </div>
     );
   }

@@ -6,8 +6,8 @@ class TableBox extends React.Component {
   };
   render() {
     let tableDataDOM = "";
-    tableDataDOM = this.props.table_Values.map((table, index) => {
-      console.log(this.props.table_Values);
+    tableDataDOM = this.props.tab_data.map((table, index) => {
+      console.log(this.props.tab_data);
       console.log(index);
 
       if (table !== "Symbol not supported") {
@@ -48,7 +48,7 @@ class TableBox extends React.Component {
     return (
       <div className="item-table">
         <h5 className="table-heading">Your Companies Latest Stock values:</h5>
-        {this.props.show_Table ? (
+        {this.props.display_table ? (
           <table className="table table-striped">
             <thead>
               <tr>
