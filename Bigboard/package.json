@@ -9,6 +9,7 @@
     "@testing-library/user-event": "^12.1.10",
     "axios": "^0.21.0",
     "chart.js": "^2.9.4",
+    "marquee": "^0.2.1",
     "plotly.js": "^1.57.1",
     "react": "^17.0.1",
     "react-alert": "^7.0.2",
