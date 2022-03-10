@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/AkanshaNeha/Front-end-project--Bigboard/static/css/main.09a5a8d3.chunk.css",
+    "main.js": "/AkanshaNeha/Front-end-project--Bigboard/static/js/main.bd78eecf.chunk.js",
+    "main.js.map": "/AkanshaNeha/Front-end-project--Bigboard/static/js/main.bd78eecf.chunk.js.map",
+    "runtime-main.js": "/AkanshaNeha/Front-end-project--Bigboard/static/js/runtime-main.6f6cdfbe.js",
+    "runtime-main.js.map": "/AkanshaNeha/Front-end-project--Bigboard/static/js/runtime-main.6f6cdfbe.js.map",
+    "static/js/2.f6e72d34.chunk.js": "/AkanshaNeha/Front-end-project--Bigboard/static/js/2.f6e72d34.chunk.js",
+    "static/js/2.f6e72d34.chunk.js.map": "/AkanshaNeha/Front-end-project--Bigboard/static/js/2.f6e72d34.chunk.js.map",
+    "static/js/3.82242edd.chunk.js": "/AkanshaNeha/Front-end-project--Bigboard/static/js/3.82242edd.chunk.js",
+    "static/js/3.82242edd.chunk.js.map": "/AkanshaNeha/Front-end-project--Bigboard/static/js/3.82242edd.chunk.js.map",
+    "index.html": "/AkanshaNeha/Front-end-project--Bigboard/index.html",
+    "static/css/main.09a5a8d3.chunk.css.map": "/AkanshaNeha/Front-end-project--Bigboard/static/css/main.09a5a8d3.chunk.css.map",
+    "static/js/2.f6e72d34.chunk.js.LICENSE.txt": "/AkanshaNeha/Front-end-project--Bigboard/static/js/2.f6e72d34.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/AkanshaNeha/Front-end-project--Bigboard/static/media/DNA.a6b5702f.mp4"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6f6cdfbe.js",
+    "static/js/2.f6e72d34.chunk.js",
+    "static/css/main.09a5a8d3.chunk.css",
+    "static/js/main.bd78eecf.chunk.js"
+  ]
+}
