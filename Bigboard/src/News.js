@@ -1,17 +1,15 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
-/* eslint-disable jsx-a11y/no-distracting-elements */
 import React from "react";
 import axios from "axios";
 import moment from "moment";
 import "./News.css";
-
 class News extends React.Component {
-  // constructor(props){
-  //     super(props);
-  // }
+  constructor(props) {
+    super(props);
+  }
   state = {
-    Data: "**Provide your choice of company stock ticker to display the latest news",
+    Data: "*Provide a company stock ticker for latest news*",
   };
+
   componentDidUpdate(pP) {
     if (pP.currentStockCode !== this.props.currentStockCode) {
       console.log(this.props.currentStockCode);
@@ -40,12 +38,11 @@ class News extends React.Component {
           },
         })
         .then((response) => {
-          // console.log(response.data[0].headline);
           var headlines = "";
           for (var i = 0; i < response.data.length; i++) {
             headlines += response.data[i].headline + ".";
           }
-          // console.log(headlines);
+
           this.setState({ Data: headlines }, () => {});
         });
     }
