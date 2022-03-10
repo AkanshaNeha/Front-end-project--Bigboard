@@ -1,6 +1,7 @@
 body {
   background: #eee;
 }
+
 div.container.footer {
   position: fixed;
   left: 0;
@@ -8,14 +9,17 @@ div.container.footer {
   max-width: 100%;
   padding: 0;
 }
+
 .news-scroll a {
   text-decoration: none;
   color: white;
   font-weight: 600;
 }
+
 .news-scroll {
   padding-top: 5px;
 }
+
 #ticker {
   color: rgb(0, 35, 80);
   background-color: white;
@@ -24,12 +28,14 @@ div.container.footer {
   align-items: center;
   font-size: 20px;
 }
+
 .d-flex.breaking-news {
   background-color: rgb(0, 35, 80);
   height: 40px;
   color: white;
   font-weight: 900;
 }
+
 .hidden-footer-container {
   display: none;
 }
