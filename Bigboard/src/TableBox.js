@@ -53,7 +53,7 @@ class TableBox extends React.Component {
             <thead>
               <tr>
                 <th>Stock Code</th>
-                <th>Last Updated Data</th>
+                <th>Last Updated Date</th>
                 <th>Open Price</th>
                 <th>Low Price</th>
                 <th>High Price</th>
