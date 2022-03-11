@@ -13,8 +13,8 @@ class InputBox extends React.Component {
 
     stockcode = document.getElementById("stockcode").value;
 
-    let startDate = Math.round(new Date().getTime() / 1000);
-    let endDate = startDate - (72 * 3600);
+   // let startDate = Math.round(new Date().getTime() / 1000);
+    //let endDate = startDate - (72 * 3600);
 
     if (this.state.inputArray.includes(stockcode)) {
       alert("Already Exists");

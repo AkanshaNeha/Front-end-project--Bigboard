@@ -6,7 +6,8 @@ class TableBox extends React.Component {
   };
   render() {
     let tableDataDOM = "";
-    tableDataDOM = this.props.tab_data.map((table, index) => {
+     // eslint-disable-next-line array-callback-return
+     tableDataDOM = this.props.tab_data.map((table, index) => {
       console.log(this.props.tab_data);
       console.log(index);
 

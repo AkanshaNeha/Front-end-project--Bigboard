@@ -3,9 +3,7 @@ import axios from "axios";
 import moment from "moment";
 import "./News.css";
 class News extends React.Component {
-  constructor(props) {
-    super(props);
-  }
+ 
   state = {
     Data: "*Provide a company stock ticker for latest news*",
   };
@@ -55,9 +53,9 @@ class News extends React.Component {
           <div id="ticker" className="ticker d-flex news">
             <span className="d-flex align-items-center">&nbsp;NEWS</span>
           </div>
-          <marquee className="news-scroll" behavior="scroll" direction="left">
-            <a href="#"> {this.state.Data}</a>
-          </marquee>
+          <p className="news-scroll" behavior="scroll" direction="left">
+            <a href="sad/"> {this.state.Data}</a>
+          </p>
         </div>
       </div>
     );
