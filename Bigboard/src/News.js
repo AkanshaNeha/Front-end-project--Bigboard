@@ -1,3 +1,6 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
+/* eslint-disable jsx-a11y/no-distracting-elements */
+/* eslint-disable no-useless-constructor */
 import React from "react";
 import axios from "axios";
 import moment from "moment";

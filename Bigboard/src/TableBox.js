@@ -1,3 +1,4 @@
+/* eslint-disable array-callback-return */
 import React from "react";
 import "./TableBox.css";
 class TableBox extends React.Component {
