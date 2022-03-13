@@ -19,8 +19,6 @@ class FilterBox extends React.Component{
             document.querySelector("input.end-date").value = '';
             alert('please enter valid Start and End date');
         }
-    
-    
     }
     else{
         alert('please enter Start and End date');
